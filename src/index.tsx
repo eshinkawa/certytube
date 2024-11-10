@@ -1,4 +1,3 @@
-import VideoLesson from '@/src/components/VideoLesson';
 import React, { useState } from 'react';
 import {
   SafeAreaView,
@@ -7,12 +6,13 @@ import {
   StyleSheet,
   TouchableOpacity,
   Text,
-  KeyboardAvoidingView, 
+  KeyboardAvoidingView,
   Platform,
 } from 'react-native';
- 
-const App = () => { 
-  const [videoUrl, setVideoUrl] = useState(''); 
+import VideoLesson from './components/VideoLesson';
+
+const App = () => {
+  const [videoUrl, setVideoUrl] = useState('');
   const [isVideoStarted, setIsVideoStarted] = useState(false);
 
   const handleStartLesson = () => {
@@ -127,15 +127,14 @@ const styles = StyleSheet.create({
   },
   lessonContainer: {
     flex: 1,
-    marginTop: 40,
   },
   backButton: {
-    padding: 10,
-    marginBottom: 20,
+    padding: 15,
   },
   backButtonText: {
     color: '#1a73e8',
-    fontSize: 16
+    fontSize: 16,
+    fontWeight: '600',
   },
 });
 
